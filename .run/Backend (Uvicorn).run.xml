@@ -11,11 +11,12 @@
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
-    <option name="SCRIPT_NAME" value="uvicorn" />
+    <option name="SCRIPT_NAME" value="" />
     <option name="PARAMETERS" value="app.main:app --reload" />
+    <option name="MODULE_MODE" value="true" />
+    <option name="MODULE_NAME" value="uvicorn" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
-    <option name="MODULE_MODE" value="false" />
     <option name="REDIRECT_INPUT" value="false" />
     <option name="INPUT_FILE" value="" />
   </configuration>

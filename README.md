@@ -55,7 +55,16 @@ poetry run pytest
 
 ## PyCharm
 
-В каталоге `.run` размещена конфигурация `Backend (Uvicorn).run.xml`, позволяющая запустить backend в PyCharm (Run → Run…). При первом запуске убедитесь, что выбран интерпретатор с установленным Poetry окружением.
+В каталоге `.run` размещена конфигурация `Backend (Uvicorn).run.xml`, позволяющая запустить backend в PyCharm (Run → Run…).
+
+1. Откройте проект в PyCharm и дождитесь индексирования.
+2. Убедитесь, что виртуальное окружение (Poetry или другое) активировано и в нём установлены зависимости из `backend/pyproject.toml`.
+3. В меню **Run → Edit Configurations…** выберите `Backend (Uvicorn)`.
+4. Проверьте, что в секции **Execution** отмечен пункт **Execute using a module** и в поле **Module name** указано `uvicorn` (PyCharm подставляет команду `python -m uvicorn`).
+5. Рабочая директория должна указывать на `$PROJECT_DIR$/backend`, чтобы путь `app.main:app` разрешался корректно.
+6. Нажмите **Run** — сервер будет запущен в режиме Hot Reload (`--reload`).
+
+Если конфигурация не появилась автоматически, добавьте новый Python Run Configuration с типом «Module name», значением `uvicorn` и параметрами `app.main:app --reload` вручную.
 
 ## Архитектура
 
