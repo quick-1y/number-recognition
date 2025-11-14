@@ -1,0 +1,142 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+aside {
+  background: #1f2937;
+  color: #f8fafc;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+aside a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: #cbd5f5;
+}
+
+aside a.active,
+aside a:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+main {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+}
+
+th, td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.tag-white {
+  background: #22c55e;
+  color: #14532d;
+}
+
+.tag-black {
+  background: #ef4444;
+  color: #7f1d1d;
+}
+
+.tag-info {
+  background: #eab308;
+  color: #713f12;
+}
+
+.status-online {
+  color: #16a34a;
+}
+
+.status-offline {
+  color: #ef4444;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.settings-grid article {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5f5;
+}
+
+.search-form button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.search-form button[disabled] {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
